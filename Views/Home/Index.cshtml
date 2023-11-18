@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@*create your own design but script should as below.*@
+<form action="/Home/purchase" method="POST">
+    <script src="https://checkout.stripe.com/checkout.js"
+            class="stripe-button"
+            data-key="Publishable key" @*add your Publishable key provided by stripe in API keys*@
+            data-name="Custom Testing"
+            data-description="Testing for payment"
+            data-amount="{{200}}"
+            data-currency="usd">
+    </script>
+</form>
+
+
